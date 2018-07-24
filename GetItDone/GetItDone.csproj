@@ -92,6 +92,7 @@
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="ListTableViewCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -107,6 +108,10 @@
     <Compile Include="ListTableViewController.cs" />
     <Compile Include="ListTableViewController.designer.cs">
       <DependentUpon>ListTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTableViewCell.cs" />
+    <Compile Include="ListTableViewCell.designer.cs">
+      <DependentUpon>ListTableViewCell.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
