@@ -28,7 +28,9 @@
                             <outlet property="delegate" destination="204" id="208"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="205" title="Add List Item"/>
+                    <navigationItem key="navigationItem" id="205" title="Add List Item">
+                        <barButtonItem key="rightBarButtonItem" id="484" style="plain" systemItem="add"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="211" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
