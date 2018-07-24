@@ -28,7 +28,7 @@
                             <outlet property="delegate" destination="204" id="208"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="205" title="Get It Done"/>
+                    <navigationItem key="navigationItem" id="205" title="Add List Item"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="211" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,6 +40,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="215">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" colorSpace="calibratedRGB" red="1" green="0.29411764705882354" blue="0.792156862745098" alpha="1"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                            <color key="textShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="204" kind="relationship" relationship="rootViewController" id="214"/>
@@ -50,4 +55,5 @@
             <point key="canvasLocation" x="186" y="282"/>
         </scene>
     </scenes>
+    <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
 </document>
