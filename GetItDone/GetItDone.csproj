@@ -101,9 +101,9 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
+    <Compile Include="ListViewController.cs" />
+    <Compile Include="ListViewController.designer.cs">
+      <DependentUpon>ListViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="ListTableViewController.cs" />
     <Compile Include="ListTableViewController.designer.cs">
@@ -112,6 +112,10 @@
     <Compile Include="ListTableViewCell.cs" />
     <Compile Include="ListTableViewCell.designer.cs">
       <DependentUpon>ListTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetailViewController.cs" />
+    <Compile Include="DetailViewController.designer.cs">
+      <DependentUpon>DetailViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

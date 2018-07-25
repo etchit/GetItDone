@@ -11,11 +11,8 @@ using UIKit;
 
 namespace GetItDone
 {
-    [Register ("ListTableViewController")]
-    partial class ListTableViewController
+    [Register ("DetailViewController")]
+    partial class DetailViewController
     {
-        void ReleaseDesignerOutlets ()
-        {
-        }
     }
 }
