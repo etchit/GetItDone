@@ -14,5 +14,8 @@ namespace GetItDone
     [Register ("DetailViewController")]
     partial class DetailViewController
     {
+        void ReleaseDesignerOutlets ()
+        {
+        }
     }
 }
