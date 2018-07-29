@@ -41,11 +41,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="205" title="Add List Item">
-                        <barButtonItem key="rightBarButtonItem" id="484" style="plain" systemItem="add"/>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" notEnabled="YES"/>
                         </accessibility>
+                        <barButtonItem key="rightBarButtonItem" id="5727" systemItem="add">
+                            <connections>
+                                <action selector="AddListItemWasPressed:" destination="204" id="5735"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="AddListItem" destination="5727" id="name-outlet-5727"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="211" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

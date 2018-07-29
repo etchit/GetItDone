@@ -101,10 +101,6 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ListViewController.cs" />
-    <Compile Include="ListViewController.designer.cs">
-      <DependentUpon>ListViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="ListTableViewController.cs" />
     <Compile Include="ListTableViewController.designer.cs">
       <DependentUpon>ListTableViewController.cs</DependentUpon>
