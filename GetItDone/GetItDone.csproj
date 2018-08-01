@@ -113,6 +113,10 @@
     <Compile Include="DetailViewController.designer.cs">
       <DependentUpon>DetailViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddItemAlertView.cs" />
+    <Compile Include="AddItemAlertView.designer.cs">
+      <DependentUpon>AddItemAlertView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\GetItDoneLogo.png" />

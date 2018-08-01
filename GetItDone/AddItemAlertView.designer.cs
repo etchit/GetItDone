@@ -11,19 +11,11 @@ using UIKit;
 
 namespace GetItDone
 {
-    [Register ("ListTableViewController")]
-    partial class ListTableViewController
+    [Register ("AddItemAlertView")]
+    partial class AddItemAlertView
     {
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIBarButtonItem AddListItem { get; set; }
-
         void ReleaseDesignerOutlets ()
         {
-            if (AddListItem != null) {
-                AddListItem.Dispose ();
-                AddListItem = null;
-            }
         }
     }
 }
