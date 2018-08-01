@@ -124,7 +124,7 @@
         </scene>
         <scene sceneID="6562">
             <objects>
-                <viewController id="6563" sceneMemberID="viewController" customClass="AddItemAlertView">
+                <viewController id="6563" sceneMemberID="viewController" customClass="AddItemAlertView" modalPresentationStyle="overCurrentContext">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6560"/>
                         <viewControllerLayoutGuide type="bottom" id="6561"/>

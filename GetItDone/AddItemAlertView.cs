@@ -13,11 +13,18 @@ namespace GetItDone
         {
         }
 
-        private UIVisualEffectView effectView = new UIVisualEffectView(UIBlurEffect.FromStyle(UIBlurEffectStyle.Dark));
+        private UIVisualEffectView effectView = new UIVisualEffectView(UIBlurEffect.FromStyle(UIBlurEffectStyle.Light));
 
         public override void ViewDidLoad()
         {
            // setupUI();
+        }
+
+        public override void ViewDidAppear(bool animated)
+        {
+            base.ViewDidAppear(animated);
+
+            ModalInPopover = true;
         }
 
 
@@ -25,36 +32,28 @@ namespace GetItDone
         {
             base.ViewWillLayoutSubviews();
 
-            this.View.BackgroundColor = UIColor.FromRGB(253, 81, 201);
+            // Set background colour
+            //this.View.BackgroundColor = UIColor.FromRGB(253, 81, 201);
+            this.View.BackgroundColor = UIColor.LightGray.ColorWithAlpha(0.4f);
+
+            // Create container view to house add list item elements.
             UIView popupBox = new UIView(new CGRect(0, 0, (UIScreen.MainScreen.Bounds.Width - 40),(UIScreen.MainScreen.Bounds.Height - 280)));
             popupBox.Center = View.Center;
             popupBox.BackgroundColor = UIColor.White;
             popupBox.Layer.CornerRadius = 5;
-
-        
             View.AddSubview(popupBox);
-        }
 
-        private void setupUI(){
+            // Create UIView for title label
+            UIView titleLabelView = new UIView(new CGRect(0, 0, popupBox.Bounds.Width, 60));
+            titleLabelView.Frame.Top.Equals(popupBox.Frame.Top);
+            titleLabelView.BackgroundColor = UIColor.FromRGB(253, 81, 201);
+            popupBox.AddSubview(titleLabelView);
 
-            // Get the parent view's layout
-            var margins = View.LayoutMarginsGuide;
-
-           
-
-           
-
-            //popupBox.BackgroundColor = UIColor.White;
-
-            ////// Pin the leading edge of the view to the margin
-            //NSLayoutConstraint.Create(popupBox, NSLayoutAttribute.Leading, NSLayoutRelation.Equal, View, NSLayoutAttribute.LeadingMargin, 1.0f, 0.0f).Active = true;
-           
-            ////// Pin the trailing edge of the view to the margin
-            //NSLayoutConstraint.Create(popupBox, NSLayoutAttribute.Trailing, NSLayoutRelation.Equal, View, NSLayoutAttribute.TrailingMargin, 1.0f, 0.0f).Active = true;
-           
-            ////// Give the view a 1:2 aspect ratio
-            //NSLayoutConstraint.Create(popupBox, NSLayoutAttribute.Height, NSLayoutRelation.Equal, popupBox, NSLayoutAttribute.Width, 2.0f, 0.0f).Active = true;
-
+            UILabel titleLabel = new UILabel();
+            titleLabel.Center.Equals(titleLabelView.Center);
+            titleLabel.Text = "Add Item to List";
+            titleLabel.TextColor = UIColor.Black;
+            titleLabelView.AddSubview(titleLabel);
         }
     }
 }
