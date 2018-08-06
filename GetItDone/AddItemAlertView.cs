@@ -2,12 +2,17 @@
 using CoreGraphics;
 using Foundation;
 using System;
+using System.Collections.Generic;
 using UIKit;
 
 namespace GetItDone
 {
     public partial class AddItemAlertView : UIViewController
     {
+
+        // create list to hold all the to do items
+        List<Task> taskList;
+
         partial void CancelBtn_TouchUpInside(UIButton sender)
         {
             Console.WriteLine("User pressed cancel");
@@ -16,6 +21,23 @@ namespace GetItDone
         partial void AddItemBtn_TouchUpInside(UIButton sender)
         {
             Console.WriteLine("User pressed add item");
+
+            addTaskToList();
+
+           
+        }
+
+        public void addTaskToList(){
+
+            // pull values from alertview and add them to Task List
+            taskList.Add(new Task()
+            {
+                taskTitle = TaskTitle.Text,
+                taskDescription = TaskDescription.Text,
+                dueDate = (System.DateTime)DueDate.Date,
+                taskComplete = false
+
+            });
         }
 
 
@@ -23,6 +45,9 @@ namespace GetItDone
 
         public AddItemAlertView(IntPtr handle) : base(handle)
         {
+            // initialise list
+            taskList = new List<Task>();
+
         }
 
         private UIVisualEffectView effectView = new UIVisualEffectView(UIBlurEffect.FromStyle(UIBlurEffectStyle.Light));
@@ -259,6 +284,8 @@ namespace GetItDone
 
         }
 
+
+       
         public class SizeView : UIButton
         {
             CGSize size;
@@ -279,4 +306,13 @@ namespace GetItDone
             }
         }
     }
+
+    public class Task
+    {
+       public string taskTitle;
+       public string taskDescription;
+        public  Boolean taskComplete;
+        public DateTime dueDate;
+    }
+
 }
