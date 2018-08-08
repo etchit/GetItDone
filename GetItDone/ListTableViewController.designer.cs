@@ -14,8 +14,16 @@ namespace GetItDone
     [Register ("ListTableViewController")]
     partial class ListTableViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIBarButtonItem AddListItem { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (AddListItem != null) {
+                AddListItem.Dispose ();
+                AddListItem = null;
+            }
         }
     }
 }

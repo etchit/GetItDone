@@ -8,6 +8,15 @@ namespace GetItDone
     {
         public ListTableViewController (IntPtr handle) : base (handle)
         {
+            
         }
+
+        //partial void AddListItemWasPressed(UIBarButtonItem sender)
+        //{
+
+        //    Console.WriteLine("Button Was Pressed");
+        //    //throw new NotImplementedException();
+        //}
+
     }
 }
