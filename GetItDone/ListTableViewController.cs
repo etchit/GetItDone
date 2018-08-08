@@ -92,5 +92,20 @@ namespace GetItDone
         {
             return 1;
         }
+
+        public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+        {
+            if (segue.Identifier == "ShowTaskDetailSegue")
+            {
+                var navigationController = segue.DestinationViewController as DetailViewController;
+                if (navigationController != null)
+                {
+                    var rowPath = TableView.IndexPathForSelectedRow;
+                    var selectedData = taskItems[rowPath.Row];
+                    navigationController.selectedTask = selectedData;
+                }
+            }
+        }
+
     }
 }
