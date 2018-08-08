@@ -52,7 +52,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="5727">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="73884" kind="presentation" id="74036"/>
+                                <segue destination="73884" kind="show" id="74036"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -62,7 +62,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="211" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="613" y="262"/>
+            <point key="canvasLocation" x="607" y="252"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="212">
@@ -83,7 +83,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="216" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-167" y="280"/>
+            <point key="canvasLocation" x="135" y="251"/>
         </scene>
         <!--Add Item Alert View-->
         <scene sceneID="6562">
@@ -401,13 +401,13 @@
                         <outlet property="TaskTitleTextField" destination="74067" id="name-outlet-74067"/>
                         <outlet property="TaskDescriptionTextView" destination="74069" id="name-outlet-74069"/>
                         <outlet property="DueDatePicker" destination="74073" id="name-outlet-74073"/>
-                        <outlet property="CancelBtn" destination="74076" id="name-outlet-74076"/>
                         <outlet property="addTaskBtn" destination="74079" id="name-outlet-74079"/>
+                        <outlet property="cancelBtn" destination="74076" id="name-outlet-74076"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73886" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1386" y="261"/>
+            <point key="canvasLocation" x="1070" y="246"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -38,6 +38,10 @@ namespace GetItDone
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void AddButtonWasPressed (UIKit.UIButton sender);
 
+        [Action("CancelButtonWasPressed:")]
+        [GeneratedCode("iOS Designer", "1.0")]
+        partial void CancelButtonWasPressed(UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (addTaskBtn != null) {

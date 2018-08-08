@@ -106,7 +106,6 @@
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
-    <InterfaceDefinition Include="ListItemTableViewCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -123,10 +122,6 @@
     <Compile Include="AddItemAlertView.cs" />
     <Compile Include="AddItemAlertView.designer.cs">
       <DependentUpon>AddItemAlertView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ListItemTableViewCell.cs" />
-    <Compile Include="ListItemTableViewCell.designer.cs">
-      <DependentUpon>ListItemTableViewCell.cs</DependentUpon>
     </Compile>
     <Compile Include="ListTableViewController.cs" />
     <Compile Include="ListTableViewController.designer.cs">

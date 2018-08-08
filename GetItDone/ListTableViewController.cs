@@ -59,6 +59,14 @@ namespace GetItDone
        
         }
 
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+
+            // hide navigation bar to make view controller look like an alertview
+            NavigationController.NavigationBarHidden = false;
+        }
+
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
