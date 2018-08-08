@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
@@ -81,6 +80,21 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="SQLitePCLRaw.core">
+      <HintPath>..\packages\SQLitePCLRaw.core.1.1.5\lib\Xamarin.iOS10\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.sqlite3">
+      <HintPath>..\packages\SQLitePCLRaw.provider.sqlite3.ios_unified.1.1.5\lib\Xamarin.iOS10\SQLitePCLRaw.provider.sqlite3.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_green">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.5\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_green.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.1.1.5\lib\Xamarin.iOS10\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net">
+      <HintPath>..\packages\sqlite-net-pcl.1.4.118\lib\netstandard1.1\SQLite-net.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -92,23 +106,16 @@
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
-    <InterfaceDefinition Include="ListTableViewCell.xib" />
+    <InterfaceDefinition Include="ListItemTableViewCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ListTableViewController.cs" />
-    <Compile Include="ListTableViewController.designer.cs">
-      <DependentUpon>ListTableViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ListTableViewCell.cs" />
-    <Compile Include="ListTableViewCell.designer.cs">
-      <DependentUpon>ListTableViewCell.cs</DependentUpon>
-    </Compile>
     <Compile Include="DetailViewController.cs" />
     <Compile Include="DetailViewController.designer.cs">
       <DependentUpon>DetailViewController.cs</DependentUpon>
@@ -116,6 +123,19 @@
     <Compile Include="AddItemAlertView.cs" />
     <Compile Include="AddItemAlertView.designer.cs">
       <DependentUpon>AddItemAlertView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListItemTableViewCell.cs" />
+    <Compile Include="ListItemTableViewCell.designer.cs">
+      <DependentUpon>ListItemTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTableViewController.cs" />
+    <Compile Include="ListTableViewController.designer.cs">
+      <DependentUpon>ListTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskItem.cs" />
+    <Compile Include="AddGetItDoneTask.cs" />
+    <Compile Include="AddGetItDoneTask.designer.cs">
+      <DependentUpon>AddGetItDoneTask.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
