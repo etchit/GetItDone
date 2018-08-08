@@ -54,7 +54,7 @@ namespace GetItDone
             using (var connection = new SQLite.SQLiteConnection(pathToDB))
             {
                 // table will only be "created" the first time the view is loaded
-               connection.CreateTable<TaskItem>();
+                connection.CreateTable<TaskItem>();
             }
        
         }
@@ -105,6 +105,19 @@ namespace GetItDone
                     navigationController.selectedTask = selectedData;
                 }
             }
+        }
+
+       public override UITableViewRowAction[] EditActionsForRow(UITableView tableView, NSIndexPath indexPath)
+        {
+            var swipeRightAction = UITableViewRowAction.Create(
+                UITableViewRowActionStyle.Default,
+                "Delete",
+                (arg1, arg2) =>
+            {
+
+            });
+
+            return new UITableViewRowAction[] { swipeRightAction };
         }
 
     }
