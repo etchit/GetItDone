@@ -106,18 +106,21 @@ namespace GetItDone
                 }
             }
         }
-
-       public override UITableViewRowAction[] EditActionsForRow(UITableView tableView, NSIndexPath indexPath)
+  
+        public override void CommitEditingStyle(UITableView tableView, UITableViewCellEditingStyle editingStyle, NSIndexPath indexPath)
         {
-            var swipeRightAction = UITableViewRowAction.Create(
-                UITableViewRowActionStyle.Default,
-                "Delete",
-                (arg1, arg2) =>
+            switch (editingStyle)
             {
-
-            });
-
-            return new UITableViewRowAction[] { swipeRightAction };
+                case UITableViewCellEditingStyle.Delete:
+                    // removes the item from the taskList (but does not remote from SQLdb)
+                    taskItems.RemoveAt(indexPath.Row);
+                    // removes row from tableview
+                    tableView.DeleteRows(new NSIndexPath[] { indexPath }, UITableViewRowAnimation.Fade);
+                    break;
+                case UITableViewCellEditingStyle.None:
+                    Console.WriteLine("CommitEditingStyle:None called");
+                    break;
+            }
         }
 
     }
