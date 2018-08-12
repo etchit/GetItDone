@@ -163,7 +163,8 @@ namespace GetItDone
                                                                       (FlagAction, view, success) => {
                 Console.WriteLine("Congratulations, you have GotItDone!");
                                                                           var cell = tableView.CellAt(indexPath);
-                                                                          cell.TextLabel.Text += "  [Completed]";
+                                                                          cell.Accessory = UITableViewCellAccessory.Checkmark;
+                                                                          cell.TintColor = UIColor.FromRGB(253, 81, 201);
                                                                       });
 
       

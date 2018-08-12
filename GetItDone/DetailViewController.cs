@@ -23,7 +23,7 @@ namespace GetItDone
             taskDescription.Text = selectedTask.TaskDescription;
             dueDate.Text = selectedTask.TaskDueDate.ToString();
 
-            var checkCompleted = selectedTask.TaskCompleted;
+            checkCompleted = selectedTask.TaskCompleted;
 
             if (checkCompleted == true){
                 taskCompleted.On = true;
