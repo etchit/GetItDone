@@ -150,19 +150,20 @@ namespace GetItDone
         public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(UITableView tableView, NSIndexPath indexPath)
         {
 
-            var markTaskAsCompleteAction = MarkTaskAsCompleteAction(indexPath.Row);
+            var markTaskAsCompleteAction = MarkTaskAsCompleteAction(tableView, indexPath);
             var leadingSwipe = UISwipeActionsConfiguration.FromActions(new UIContextualAction[] { markTaskAsCompleteAction});
             leadingSwipe.PerformsFirstActionWithFullSwipe = true;
             return leadingSwipe;
         }
 
-        public UIContextualAction MarkTaskAsCompleteAction(int row)
+        public UIContextualAction MarkTaskAsCompleteAction(UITableView tableView, NSIndexPath indexPath)
         {
             var action = UIContextualAction.FromContextualActionStyle(UIContextualActionStyle.Normal,
                                                                       "Completed",
                                                                       (FlagAction, view, success) => {
-
-
+                Console.WriteLine("Congratulations, you have GotItDone!");
+                                                                          var cell = tableView.CellAt(indexPath);
+                                                                          cell.TextLabel.Text += "  [Completed]";
                                                                       });
 
       
