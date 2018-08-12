@@ -99,6 +99,9 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\GetItDoneiconx60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\GetItDoneiconx120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\GetItDoneiconx180.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -128,9 +131,17 @@
     <Compile Include="AddGetItDoneTask.designer.cs">
       <DependentUpon>AddGetItDoneTask.cs</DependentUpon>
     </Compile>
+    <Compile Include="GetItDoneTaskListCell.cs" />
+    <Compile Include="GetItDoneTaskListCell.designer.cs">
+      <DependentUpon>GetItDoneTaskListCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\GetItDoneLogo.png" />
+    <BundleResource Include="Resources\GetItDone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork%402x" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
