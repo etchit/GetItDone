@@ -33,8 +33,6 @@ namespace GetItDone
         //When user presses button to "Add" task to their list, add details to TaskList and save into db
         partial void AddButtonWasPressed(UIButton sender)
         {
-
-
             using (var connection = new SQLite.SQLiteConnection(pathToDB))
             {
                 connection.Insert(new TaskItem()
@@ -49,7 +47,8 @@ namespace GetItDone
             // after data is added to db, unwind to the homescreen
             NavigationController.PopToRootViewController(true);
         }
-       
+
+
         void CancelBtn_TouchUpInside(object sender, EventArgs e)
         {
             //When user presses button to "Add" task to their list, add details to TaskList and save into db

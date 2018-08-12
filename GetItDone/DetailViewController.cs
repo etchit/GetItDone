@@ -11,9 +11,6 @@ namespace GetItDone
         public TaskItem selectedTask;
         public static bool didChangeChecked;
 
-        // create list to hold all the to do items
-        private List<TaskItem> taskItems;
-
         private string pathToDB;
 
         public DetailViewController (IntPtr handle) : base (handle)
@@ -24,8 +21,10 @@ namespace GetItDone
         {
             base.ViewWillAppear(animated);
 
+            // set background colour
             TableView.BackgroundColor = UIColor.FromRGB(235, 235, 235);
 
+            // set all the textfields based on db values
             taskTitle.Text = selectedTask.TaskTitle;
             taskDescription.Text = selectedTask.TaskDescription;
             dueDate.Text = selectedTask.TaskDueDate.ToString();
@@ -33,6 +32,7 @@ namespace GetItDone
 
             var checkCompleted = selectedTask.TaskCompleted;
 
+            // check whether or not task is marked as completed
             if (checkCompleted == true || didChangeChecked == true){
                 taskCompleted.On = true;
                 didChangeChecked = true;
