@@ -1,3 +1,4 @@
+using CoreAnimation;
 using Foundation;
 using System;
 using UIKit;
@@ -16,6 +17,8 @@ namespace GetItDone
         {
             base.ViewWillAppear(animated);
 
+            TableView.BackgroundColor = UIColor.FromRGB(235, 235, 235);
+
             taskTitle.Text = selectedTask.TaskTitle;
             taskDescription.Text = selectedTask.TaskDescription;
             dueDate.Text = selectedTask.TaskDueDate.ToString();
@@ -29,5 +32,6 @@ namespace GetItDone
                 taskCompleted.On = false;
             }
         }
+
     }
 }

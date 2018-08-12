@@ -131,10 +131,6 @@
     <Compile Include="AddGetItDoneTask.designer.cs">
       <DependentUpon>AddGetItDoneTask.cs</DependentUpon>
     </Compile>
-    <Compile Include="GetItDoneTaskListCell.cs" />
-    <Compile Include="GetItDoneTaskListCell.designer.cs">
-      <DependentUpon>GetItDoneTaskListCell.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\GetItDoneLogo.png" />

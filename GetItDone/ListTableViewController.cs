@@ -159,7 +159,7 @@ namespace GetItDone
         public UIContextualAction MarkTaskAsCompleteAction(int row)
         {
             var action = UIContextualAction.FromContextualActionStyle(UIContextualActionStyle.Normal,
-                                                                      "Flag",
+                                                                      "Completed",
                                                                       (FlagAction, view, success) => {
 
 
