@@ -17,9 +17,17 @@ namespace GetItDone
             pathToDB = Path.Combine(docFolder, "GetItDoneDB.db");
         }
 
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+            // hide navigation bar to make view controller look like an alertview
+            NavigationController.NavigationBarHidden = true;
+        }
+
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+            cancelBtn.TouchUpInside += CancelBtn_TouchUpInside;
         }
 
         //When user presses button to "Add" task to their list, add details to TaskList and save into db
@@ -39,5 +47,13 @@ namespace GetItDone
             // after data is added to db, unwind to the homescreen
             NavigationController.PopToRootViewController(true);
         }
+
+
+        void CancelBtn_TouchUpInside(object sender, EventArgs e)
+        {
+            //When user presses button to "Add" task to their list, add details to TaskList and save into db
+            NavigationController.PopToRootViewController(true);
+        }
+
     }
 }

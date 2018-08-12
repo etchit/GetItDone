@@ -99,6 +99,9 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\GetItDoneiconx60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\GetItDoneiconx120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\GetItDoneiconx180.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -106,7 +109,6 @@
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
-    <InterfaceDefinition Include="ListItemTableViewCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -120,14 +122,6 @@
     <Compile Include="DetailViewController.designer.cs">
       <DependentUpon>DetailViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddItemAlertView.cs" />
-    <Compile Include="AddItemAlertView.designer.cs">
-      <DependentUpon>AddItemAlertView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ListItemTableViewCell.cs" />
-    <Compile Include="ListItemTableViewCell.designer.cs">
-      <DependentUpon>ListItemTableViewCell.cs</DependentUpon>
-    </Compile>
     <Compile Include="ListTableViewController.cs" />
     <Compile Include="ListTableViewController.designer.cs">
       <DependentUpon>ListTableViewController.cs</DependentUpon>
@@ -140,6 +134,10 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\GetItDoneLogo.png" />
+    <BundleResource Include="Resources\GetItDone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork%402x" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
