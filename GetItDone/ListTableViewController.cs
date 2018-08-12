@@ -34,10 +34,12 @@ namespace GetItDone
             // make cell reusuable
             UITableViewCell cell = tableView.DequeueReusableCell(cellIdentifier);
 
+
             // specifiy the data that will load in the cells
             var data = taskItems[indexPath.Row];
             cell.TextLabel.Text = data.TaskTitle;
-            cell.DetailTextLabel.Text = data.TaskDueDate.ToString();
+            // format the data to show only the day, not time
+            cell.DetailTextLabel.Text = data.TaskDueDate.ToShortDateString();
 
             return cell;
         }
