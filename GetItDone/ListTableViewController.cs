@@ -160,14 +160,21 @@ namespace GetItDone
         {
             var action = UIContextualAction.FromContextualActionStyle(UIContextualActionStyle.Normal,
                                                                       "Completed",
-                                                                      (FlagAction, view, success) => {
-                Console.WriteLine("Congratulations, you have GotItDone!");
-                                                                          var cell = tableView.CellAt(indexPath);
-                                                                          cell.Accessory = UITableViewCellAccessory.Checkmark;
-                                                                          cell.TintColor = UIColor.FromRGB(253, 81, 201);
-                                                                      });
+                                                                      (FlagAction, view, success) => 
+            {
+                var cell = tableView.CellAt(indexPath);
+                if (cell.Accessory == UITableViewCellAccessory.Checkmark)
+                {
+                    Console.WriteLine("Oh no, you didnt GotItDone!");
+                    cell.Accessory = UITableViewCellAccessory.None;
+                }
+                else {
+                    Console.WriteLine("Congratulations, you have GotItDone!");
+                    cell.Accessory = UITableViewCellAccessory.Checkmark;
+                    cell.TintColor = UIColor.FromRGB(253, 81, 201);
+                }
+             });
 
-      
             action.Image = UIImage.FromFile("GetItDone.png");
             action.BackgroundColor = UIColor.FromRGB(253, 81, 201);
             return action;
