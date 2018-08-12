@@ -107,6 +107,7 @@ namespace GetItDone
             }
         }
   
+        // function to swipe right to delete list items.
         public override void CommitEditingStyle(UITableView tableView, UITableViewCellEditingStyle editingStyle, NSIndexPath indexPath)
         {
             switch (editingStyle)
@@ -116,11 +117,56 @@ namespace GetItDone
                     taskItems.RemoveAt(indexPath.Row);
                     // removes row from tableview
                     tableView.DeleteRows(new NSIndexPath[] { indexPath }, UITableViewRowAnimation.Fade);
+
+                    // get the ID of the cell that needs to be deleted from the db
+                    var id = taskItems[indexPath.Row].ID+1;
+
+                    Console.WriteLine(id);
+                    removeTaskfromDB(id);
+
                     break;
                 case UITableViewCellEditingStyle.None:
                     Console.WriteLine("CommitEditingStyle:None called");
                     break;
             }
+        }
+
+        // function to remove task item from database when it is removed from list.
+        public void removeTaskfromDB(int ID){
+
+            using (var connection = new SQLite.SQLiteConnection(pathToDB))
+            {
+                // remove item from database and refresh tableview.
+                connection.Delete<TaskItem>(primaryKey: ID); 
+
+           
+                 TableView.ReloadData();
+                Console.WriteLine("Successfully removed item from GetItDone List!");
+            }
+        }
+
+        public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(UITableView tableView, NSIndexPath indexPath)
+        {
+
+            var markTaskAsCompleteAction = MarkTaskAsCompleteAction(indexPath.Row);
+            var leadingSwipe = UISwipeActionsConfiguration.FromActions(new UIContextualAction[] { markTaskAsCompleteAction});
+            leadingSwipe.PerformsFirstActionWithFullSwipe = true;
+            return leadingSwipe;
+        }
+
+        public UIContextualAction MarkTaskAsCompleteAction(int row)
+        {
+            var action = UIContextualAction.FromContextualActionStyle(UIContextualActionStyle.Normal,
+                                                                      "Flag",
+                                                                      (FlagAction, view, success) => {
+
+
+                                                                      });
+
+      
+            action.Image = UIImage.FromFile("GetItDone.png");
+            action.BackgroundColor = UIColor.FromRGB(253, 81, 201);
+            return action;
         }
 
     }
