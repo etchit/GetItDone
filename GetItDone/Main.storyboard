@@ -268,24 +268,36 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" id="87804" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                                <view contentMode="scaleToFill" id="87804" translatesAutoresizingMaskIntoConstraints="NO">
                                                     <rect key="frame" x="16" y="14" width="343" height="49"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
                                                             <real key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <constraints>
+                                                        <constraint id="97834" firstItem="87804" firstAttribute="height" constant="49"/>
+                                                    </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="84330" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="84330" translatesAutoresizingMaskIntoConstraints="NO">
                                                     <rect key="frame" x="24" y="14" width="258" height="49"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" colorSpace="calibratedRGB" red="0.9882352941176471" green="0.31372549019607843" blue="0.78431372549019607" alpha="1"/>
                                                     <nil key="highlightedColor"/>
+                                                    <constraints>
+                                                        <constraint id="98166" firstItem="84330" firstAttribute="height" constant="49"/>
+                                                    </constraints>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint id="97838" firstItem="87804" firstAttribute="leading" secondItem="83001" secondAttribute="leading" constant="16"/>
+                                                <constraint id="97839" firstItem="87804" firstAttribute="top" secondItem="83001" secondAttribute="top" constant="14"/>
+                                                <constraint id="97840" firstItem="83001" firstAttribute="trailing" secondItem="87804" secondAttribute="trailing" constant="16"/>
+                                                <constraint id="98164" firstItem="84330" firstAttribute="leading" secondItem="87804" secondAttribute="leading" constant="8"/>
+                                                <constraint id="98165" firstItem="87804" firstAttribute="trailing" secondItem="84330" secondAttribute="trailing" constant="77"/>
+                                                <constraint id="98167" firstItem="84330" firstAttribute="top" secondItem="87804" secondAttribute="top"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" colorSpace="calibratedRGB" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1"/>
                                     </tableViewCell>
@@ -296,9 +308,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" id="87805" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                                <view contentMode="scaleToFill" id="87805" translatesAutoresizingMaskIntoConstraints="NO">
                                                     <rect key="frame" x="16" y="8" width="343" height="184"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
@@ -306,13 +317,15 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="83145" text="Details of task here" key="tableHeaderView" fixedFrame="YES">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="83145" text="Details of task here" key="tableHeaderView">
                                                     <rect key="frame" x="25" y="18" width="327" height="162"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                    <constraints>
+                                                        <constraint id="97835" firstItem="83145" firstAttribute="height" constant="162"/>
+                                                    </constraints>
                                                 </textView>
                                             </subviews>
                                             <userDefinedRuntimeAttributes>
@@ -321,6 +334,14 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <color key="backgroundColor" colorSpace="calibratedRGB" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1"/>
+                                            <constraints>
+                                                <constraint id="97841" firstItem="83003" firstAttribute="trailing" secondItem="83145" secondAttribute="trailing" constant="23"/>
+                                                <constraint id="97842" firstItem="83145" firstAttribute="leading" secondItem="83003" secondAttribute="leading" constant="25"/>
+                                                <constraint id="98168" firstItem="83145" firstAttribute="leading" secondItem="87805" secondAttribute="leading" constant="9"/>
+                                                <constraint id="98169" firstItem="83145" firstAttribute="top" secondItem="87805" secondAttribute="top" constant="10"/>
+                                                <constraint id="98170" firstItem="87805" firstAttribute="trailing" secondItem="83145" secondAttribute="trailing" constant="7"/>
+                                                <constraint id="98171" firstItem="87805" firstAttribute="bottom" secondItem="83145" secondAttribute="bottom" constant="12"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="83004" rowHeight="71">
@@ -330,9 +351,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" id="88330" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                                    <rect key="frame" x="16" y="14" width="343" height="49"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view contentMode="scaleToFill" id="88330" translatesAutoresizingMaskIntoConstraints="NO">
+                                                    <rect key="frame" x="16" y="10" width="343" height="49"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
@@ -340,36 +360,54 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="83148" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="83148" translatesAutoresizingMaskIntoConstraints="NO">
                                                             <rect key="frame" x="8" y="14" width="68" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
+                                                            <constraints>
+                                                                <constraint id="98175" firstItem="83148" firstAttribute="width" constant="68"/>
+                                                            </constraints>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="83146" key="tableHeaderView" fixedFrame="YES">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="83146" key="tableHeaderView">
                                                             <rect key="frame" x="76" y="6" width="251" height="38"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                             <color key="textColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
                                                             <nil key="highlightedColor"/>
+                                                            <constraints>
+                                                                <constraint id="98180" firstItem="83146" firstAttribute="height" constant="38"/>
+                                                            </constraints>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint id="97836" firstItem="88330" firstAttribute="height" constant="49"/>
+                                                        <constraint id="98172" firstItem="83148" firstAttribute="top" secondItem="88330" secondAttribute="top" constant="14"/>
+                                                        <constraint id="98173" firstItem="83148" firstAttribute="leading" secondItem="88330" secondAttribute="leading" constant="8"/>
+                                                        <constraint id="98174" firstItem="88330" firstAttribute="bottom" secondItem="83148" secondAttribute="bottom" constant="14"/>
+                                                        <constraint id="98176" firstItem="83146" firstAttribute="leading" secondItem="83148" secondAttribute="trailing"/>
+                                                        <constraint id="98177" firstItem="83146" firstAttribute="top" secondItem="88330" secondAttribute="top" constant="6"/>
+                                                        <constraint id="98178" firstItem="88330" firstAttribute="bottom" secondItem="83146" secondAttribute="bottom" constant="5"/>
+                                                        <constraint id="98179" firstItem="88330" firstAttribute="trailing" secondItem="83146" secondAttribute="trailing" constant="16"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint id="97843" firstItem="83005" firstAttribute="trailing" secondItem="88330" secondAttribute="trailing" constant="16"/>
+                                                <constraint id="97844" firstItem="88330" firstAttribute="leading" secondItem="83005" secondAttribute="leading" constant="16"/>
+                                                <constraint id="99293" firstItem="88330" firstAttribute="top" secondItem="83005" secondAttribute="top" constant="10"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" colorSpace="calibratedRGB" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="83027" rowHeight="99">
-                                        <rect key="frame" x="0.0" y="348" width="375" height="99"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="83027" rowHeight="90">
+                                        <rect key="frame" x="0.0" y="348" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="83027" id="83028">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" id="88331" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                                <view contentMode="scaleToFill" id="88331" translatesAutoresizingMaskIntoConstraints="NO">
                                                     <rect key="frame" x="16" y="8" width="343" height="73"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute keyPath="layer.cornerRadius" type="number">
@@ -377,20 +415,44 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <subviews>
-                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="83151" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                                            <rect key="frame" x="130" y="21" width="51" height="31"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="83151" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                                            <rect key="frame" x="156" y="21" width="51" height="31"/>
+                                                            <connections>
+                                                                <action selector="DidToggleCompleted:" destination="82991" id="97024" eventType="touchDown"/>
+                                                                <action selector="DidToggleCompleted:" destination="82991" id="102837" eventType="editingDidEnd"/>
+                                                            </connections>
+                                                            <color key="onTintColor" colorSpace="calibratedRGB" red="0.9882352941176471" green="0.31372549019607843" blue="0.78431372549019607" alpha="1"/>
+                                                            <constraints>
+                                                                <constraint id="98188" firstItem="83151" firstAttribute="height" constant="31"/>
+                                                            </constraints>
                                                         </switch>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Completed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="83149" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                                            <rect key="frame" x="8" y="26" width="126" height="21"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Completed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="83149" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                                            <rect key="frame" x="8" y="26" width="108" height="21"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
+                                                            <constraints>
+                                                                <constraint id="98184" firstItem="83149" firstAttribute="height" constant="21"/>
+                                                            </constraints>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint id="97837" firstItem="88331" firstAttribute="height" constant="73"/>
+                                                        <constraint id="98181" firstItem="83149" firstAttribute="top" secondItem="88331" secondAttribute="top" constant="26"/>
+                                                        <constraint id="98182" firstItem="88331" firstAttribute="bottom" secondItem="83149" secondAttribute="bottom" constant="26"/>
+                                                        <constraint id="98183" firstItem="83149" firstAttribute="leading" secondItem="88331" secondAttribute="leading" constant="8"/>
+                                                        <constraint id="98185" firstItem="83151" firstAttribute="top" secondItem="88331" secondAttribute="top" constant="21"/>
+                                                        <constraint id="98186" firstItem="88331" firstAttribute="bottom" secondItem="83151" secondAttribute="bottom" constant="21"/>
+                                                        <constraint id="98557" firstItem="83149" firstAttribute="leading" secondItem="88331" secondAttribute="leading" constant="8"/>
+                                                        <constraint id="98559" firstItem="83151" firstAttribute="leading" secondItem="83149" secondAttribute="trailing" constant="40"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
+                                            <constraints>
+                                                <constraint id="97846" firstItem="88331" firstAttribute="leading" secondItem="83028" secondAttribute="leading" constant="16"/>
+                                                <constraint id="97847" firstItem="88331" firstAttribute="top" secondItem="83028" secondAttribute="top" constant="8"/>
+                                                <constraint id="97848" firstItem="83028" firstAttribute="trailing" secondItem="88331" secondAttribute="trailing" constant="16"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" colorSpace="calibratedRGB" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1"/>
                                     </tableViewCell>

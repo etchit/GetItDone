@@ -30,6 +30,10 @@ namespace GetItDone
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel taskTitle { get; set; }
 
+        [Action ("DidToggleCompleted:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void DidToggleCompleted (UIKit.UISwitch sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (dueDate != null) {

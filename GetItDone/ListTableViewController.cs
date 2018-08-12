@@ -41,6 +41,18 @@ namespace GetItDone
             // format the data to show only the day, not time
             cell.DetailTextLabel.Text = data.TaskDueDate.ToShortDateString();
 
+
+            if(data.TaskCompleted == true){
+                cell.Accessory = UITableViewCellAccessory.Checkmark;
+                cell.TintColor = UIColor.FromRGB(253, 81, 201);
+                DetailViewController.didChangeChecked = true;
+            }
+            else {
+                cell.Accessory = UITableViewCellAccessory.None;
+                DetailViewController.didChangeChecked = false;
+                data.TaskCompleted = false;
+            } 
+
             return cell;
         }
 
@@ -108,6 +120,11 @@ namespace GetItDone
                 }
             }
         }
+
+       
+
+
+
   
         // function to swipe right to delete list items.
         public override void CommitEditingStyle(UITableView tableView, UITableViewCellEditingStyle editingStyle, NSIndexPath indexPath)
@@ -167,11 +184,13 @@ namespace GetItDone
                 {
                     Console.WriteLine("Oh no, you didnt GotItDone!");
                     cell.Accessory = UITableViewCellAccessory.None;
+                    DetailViewController.didChangeChecked = false;
                 }
                 else {
                     Console.WriteLine("Congratulations, you have GotItDone!");
                     cell.Accessory = UITableViewCellAccessory.Checkmark;
                     cell.TintColor = UIColor.FromRGB(253, 81, 201);
+                    DetailViewController.didChangeChecked = true;
                 }
              });
 
